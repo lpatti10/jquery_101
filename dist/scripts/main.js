@@ -43,12 +43,16 @@ $( "p" ).on( "click", { foo: "bar" }, myHandler );
     $(this).hide();
   });
 
-  //.hover() event
+//.hover() event
   $("#cornsilk").hover( function(){
     $( this ).fadeOut( 200 );
     $( this ).fadeIn( 200 );
   });
 
+//.hover() event
+	 $("#tomato").on("click", function() {
+	 	$( this ).toggleClass( "colorshift" );
+	 }); 
 
 
 
