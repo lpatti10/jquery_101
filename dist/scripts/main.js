@@ -33,37 +33,54 @@ $( "p" ).on( "click", { foo: "bar" }, myHandler );
 // });
 
 
-//Combined .on() with .hide() method via click event
+//Combined .on() with .hide() method via click 
   $("#gainsboro").on("click", function(){
     $(this).hide();
   });
 
-//Combined .on() with .hide() method via dblclick event
+//Combined .on() with .hide() method via dblclick 
   $("#cornflowerBlue").on("dblclick", function(){
     $(this).hide();
   });
 
 //.hover() event
   $("#cornsilk").hover( function(){
-    $( this ).fadeOut( 200 );
-    $( this ).fadeIn( 200 );
-  });
+    $(this).css("width", "50px");
+    }, function() {
+	  	$(this).css("width", "150px");
+	});
+    
 
-//.hover() event
-	 $("#tomato").on("click", function() {
-	 	$( this ).toggleClass( "colorshift" );
-	 }); 
+//Combined .on() with .toggleClass() via click 
+	$("#tomato").on("click", function() {
+	 $(this).toggleClass("colorshift");
+	}); 
+
+//Combined .keyup() with .css() 
+	$("input").keyup( function(){
+	  $("input").css("background-color","yellowgreen");
+	});
+
+//
+	$("#x").hover( function(){
+	  	$(this).css("color", "springgreen");
+	  }, function() {
+	  	$(this).css("color", "tomato");
+	});
+
+//
+	$("#amper").on("click", function(){
+	  $(this).css("transform", "rotate(180deg)");
+	});
+
+	$("#percent").on("click", function(){
+	  $(this).css("transform", "rotate(90deg)");
+	});
 
 
-
-
-
-
-
-
-
-
-
+$("img").click(function(){
+  alert($("#portfolio").attr("href"));
+});
 
 
 
