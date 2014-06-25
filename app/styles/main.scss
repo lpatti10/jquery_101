@@ -83,6 +83,20 @@
     to {transform: rotate(360deg);}
 }
 
+.animation3 {
+    -webkit-animation: slideup 2s;
+    animation: slideup 2s;
+}
+@keyframes slideup {
+    0% {top:0px;}
+    75% {top:0px;}
+    100% {top:-20px;}
+}
+
+.border {
+  border: white 8px solid;
+  box-shadow: 4px 4px 5px #888888;
+}
 /*
 body {
   background: #fafafa;

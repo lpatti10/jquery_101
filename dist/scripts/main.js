@@ -67,7 +67,7 @@ $( "p" ).on( "click", { foo: "bar" }, myHandler );
 	});
 
 //Alert with URL on image click
-	$("img").click(function(){
+	$("#simon").click(function(){
 	  alert($("#herb").attr("href"));
 	});
 
@@ -87,8 +87,13 @@ $( "p" ).on( "click", { foo: "bar" }, myHandler );
 	});
 
 //
-		$("#g").on("click", function(){
+	$("#g").on("click", function(){
 	  $(this).addClass("animation2");
+	});
+
+	$("#boxers").on("click", function(){
+	  $(this).css("transform", "rotate(-10deg");
+	  $(this).addClass("border");
 	});
 
 
