@@ -5,8 +5,10 @@
 
 .container {
   margin: 20px;
+  width: 150px;
   display: block;
   float: left;
+  cursor: pointer;
   p {
     color: slategray;
     float: none;
@@ -49,22 +51,37 @@
 #tomato {
   width: 0; 
   height: 0; 
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
   border-bottom: 150px solid tomato;
 }
 .colorshift {
   background-color: aquamarine;
 }
 
-.arrow_down {
-  width: 0; 
-  height: 0; 
-  border-left: 100px solid transparent;
-  border-right: 100px solid transparent;
-  border-top: 150px solid tomato;
+.gradient {
+  color: white;
+  background: radial-gradient(deeppink, tomato);
+  width: 150px;
 }
 
+.animation1 {
+    -webkit-animation: fade 5s;
+    animation: fade 5s;
+}
+@keyframes fade {
+    from {background: red;}
+    to {background: yellow;}
+}
+
+.animation2 {
+    -webkit-animation: spin 2s;
+    animation: spin 2s;
+}
+@keyframes spin {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
 
 /*
 body {

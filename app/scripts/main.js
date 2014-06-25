@@ -19,18 +19,6 @@ function myHandler( event ) {
 $( "p" ).on( "click", { foo: "bar" }, myHandler );
 */
 
-// $( "p" ).on( "myCustomEvent", function( event, myName ) {
-//   $( this ).text( myName + ", hi there!" );
-//   $( "span" )
-//     .stop()
-//     .css( "opacity", 1 )
-//     .text( "myName = " + myName )
-//     .fadeIn( 30 )
-//     .fadeOut( 1000 );
-// });
-// $( "button" ).click(function () {
-//   $( "p" ).trigger( "myCustomEvent", [ "John" ] );
-// });
 
 
 //Combined .on() with .hide() method via click 
@@ -61,27 +49,46 @@ $( "p" ).on( "click", { foo: "bar" }, myHandler );
 	  $("input").css("background-color","yellowgreen");
 	});
 
-//
+//Color changes on hover
 	$("#x").hover( function(){
 	  	$(this).css("color", "springgreen");
 	  }, function() {
 	  	$(this).css("color", "tomato");
 	});
 
-//
+//Vertical flip on click
 	$("#amper").on("click", function(){
 	  $(this).css("transform", "rotate(180deg)");
 	});
 
+//Rotation on click
 	$("#percent").on("click", function(){
 	  $(this).css("transform", "rotate(90deg)");
 	});
 
+//Alert with URL on image click
+	$("img").click(function(){
+	  alert($("#herb").attr("href"));
+	});
 
-$("img").click(function(){
-  alert($("#portfolio").attr("href"));
-});
+//.one() for one-time alert on click
+	$( "#eight" ).one( "click", function() {
+	  alert( "This is an eight and I'll only say it once." );
+	});
 
+//Background gradient appears on click
+	$("#hash").on("click", function(){
+	  $(this).addClass("gradient");
+	});
 
+//Background fades from yelloe to red over 5 sec on click
+	$("#z").on("click", function(){
+	  $(this).addClass("animation1");
+	});
+
+//
+		$("#g").on("click", function(){
+	  $(this).addClass("animation2");
+	});
 
 
